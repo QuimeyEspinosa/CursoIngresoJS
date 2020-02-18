@@ -14,41 +14,47 @@ function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
   
-  numeroSecreto = Math.random(0,2);
 
-		//alert(numeroSecreto );
+    //alert(numeroSecreto );
+
+    var max;
+    var min;
   
+    max = 101
+    min = 1
+    numeroSecreto = Math.floor(Math.random() * (max - min)) + min;
     
+    console.log(numeroSecreto);
 
+    contadorIntentos = 0;    
 
 }
 
 function verificar()
 {
-  var numeroSecreto;
-  var numero;
-  var contadorIntentos;
 
-  numeroSecreto = Math.random(0,5);
+  var numeroUsuario;
 
-  numero = document.getElementById("numero").value;
+  contadorIntentos = contadorIntentos + 1;
 
-  contadorIntentos = document.getElementById("intentos").value;
+  numeroUsuario = document.getElementById("numero").value;
+  
+  document.getElementById("intentos").value = contadorIntentos;
   
 
-  if(numero == numeroSecreto ) {
+  if(numeroSecreto == numeroUsuario ) {
 		
 		alert("Ganaste! Y en solo " + contadorIntentos + " intentos");
 		
 		} else {
 		
-			if(numero < numeroSecreto ) {
+			if(numeroUsuario > numeroSecreto ) {
 				
-			alert("falta para llegar al número secreto") ;
+			alert("se pasó del número secreto") ;
 		
 			} else {
 		
-				alert("se pasó del número secreto");
+				alert("falta para el número secreto");
 			}
 		
 		}	
