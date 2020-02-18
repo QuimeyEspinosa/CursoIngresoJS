@@ -15,7 +15,7 @@ function mostrar()
 		
 		alert("El resultado es " + resultado + " EXCELENTE");
 		
-		} else{
+		} else {
 		
 			if(resultado >= 4 ){
 				

@@ -13,14 +13,43 @@ var contadorIntentos;
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
-	 
+  
+  numeroSecreto = Math.random(0,2);
+
 		//alert(numeroSecreto );
-	
+  
+    
+
 
 }
 
 function verificar()
 {
-	
-	
+  var numeroSecreto;
+  var numero;
+  var contadorIntentos;
+
+  numeroSecreto = Math.random(0,5);
+
+  numero = document.getElementById("numero").value;
+
+  contadorIntentos = document.getElementById("intentos").value;
+  
+
+  if(numero == numeroSecreto ) {
+		
+		alert("Ganaste! Y en solo " + contadorIntentos + " intentos");
+		
+		} else {
+		
+			if(numero < numeroSecreto ) {
+				
+			alert("falta para llegar al número secreto") ;
+		
+			} else {
+		
+				alert("se pasó del número secreto");
+			}
+		
+		}	
 }
