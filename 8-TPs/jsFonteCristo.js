@@ -11,3 +11,11 @@ function ComenzarIngreso ()
 {
  	
 }
+
+function NumerosPares () 
+{
+ 	
+}
+
+
+//continuar creando functions
