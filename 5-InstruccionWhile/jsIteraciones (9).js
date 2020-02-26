@@ -8,6 +8,33 @@ function mostrar()
 	var primeraVez = true;
 
 
+	while(respuesta != 'no') 
+	{
+		do {
+			numero = prompt ("Ingrese un numero");
+			numero = parseInt (numero);
+		} while (isNaN(numero));
+
+		if(PrimeraVez) {
+			PrimeraVez = false;
+			minimo = numero;
+			maximo = numero;
+		}else{
+			if (numero < min) {
+				minimo = numero;
+			}
+		}
+		
+		respuesta = confirm("Desea continuar?");
+
+	}
+
+
+
+
+
+
+/*
 	while(respuesta) {
 		var numero = prompt ("Ingrese un numero");
 		numero = parseInt(numero);
@@ -41,7 +68,7 @@ function mostrar()
 		respuesta = confirm("Desea continuar?");
 		
 	
-	}
+	} */
 
 
 

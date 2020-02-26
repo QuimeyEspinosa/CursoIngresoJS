@@ -19,6 +19,8 @@ function mostrar()
 
 	var diferenciaPositivosYNegativos;
 
+	var numero;
+
 
 	 /*while(respuesta) {
 		var numero = prompt ("Ingrese un numero");
@@ -33,7 +35,7 @@ function mostrar()
 	do {
 				
 		do {
-			var numero = prompt("Ingrese un numero");
+			numero = prompt("Ingrese un numero");
 			numero = parseInt(numero);
 
 			} while (isNaN(numero));
