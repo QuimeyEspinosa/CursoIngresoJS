@@ -5,19 +5,11 @@ function mostrar()
 	
 	while(contador <= 10) {
 		
-		console.log(contador);
+		document.write("Numero " + contador + "<br>");
 		
 		contador++;
-
-		
-
 	
 	}
-
-	alert('iteración while');
-
-	
-
 
 
 

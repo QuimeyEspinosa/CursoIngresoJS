@@ -1,13 +1,14 @@
 function mostrar()
 {
 
-var repeticiones = prompt("ingrese el número de repeticiones");
+var repeticiones;
 
-for(var repeticiones; repeticiones ; repeticiones++) {
-    alert("Hola UTN FRA") = repeticiones;
+repeticiones = prompt("Ingrese un numero");
 
+for(var contador = 0 ; repeticiones > contador ; contador++) {
+    
+    document.write("Hola Utn fra" + "<br >");
+    
 }
-
-
 
 }//FIN DE LA FUNCIÓN
