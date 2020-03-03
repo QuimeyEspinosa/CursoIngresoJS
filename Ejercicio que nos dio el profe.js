@@ -131,8 +131,6 @@ function mostrar ()
     promedioHombres = 0;
   }
 
-  
-
 
   /*nombre = prompt("Ingrese un nombre");
   edad = prompt("Ingrese una edad");

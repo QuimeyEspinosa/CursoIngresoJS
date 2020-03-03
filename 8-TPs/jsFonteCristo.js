@@ -7,31 +7,33 @@ c.	Se pedirán un número positivo y se mostrará la cantidad de números divisi
 d.	Se pedirán un número positivo y se mostrará si el número es un número primo o no.
 e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos desde el número ingresado hasta el cero.
 */
+
+var numero;
+
 function ComenzarIngreso () 
 {
+    numero = document.getElementById("numero").value;
+    numero =  parseInt(numero);
+
+    while(isNaN(numero) || numero < 1) {
+        numero = prompt("Ingrese un número válido");
+        numero =  parseInt(numero);
+    }
  	
 }
 
 function NumerosPares () 
 {
+    ComenzarIngreso()
 
-     var numerosPares = 2;
-     var numero = document.getElementById("numero").value;
+    var contador = 0;
+    var contadorPares = 0;
 
-     numero = parseInt(numero);
-     document.write("Numeros introducidos: " + numero + "<br >");
+    while(contador < numero) {
+        contador++;
 
-
-    while(isNaN(numero) || numero < 1 ) {
-        numero = prompt("Ingrese un número");
-        numero = parseInt(numero);
-    }
-
-    while (numerosPares < numero) {
-        numerosPares++;
-
-        if (numerosPares % 2 == 0); {
-
+        if(contador % 2 == 0) {
+            contadorPares++;
         }
 
     }
@@ -48,27 +50,19 @@ function NumerosPares ()
 
 function NumerosImpares () 
 {
-    var contador = 0;
-    var contadorImpares = 0;
-    var numero = document.getElementById("numero").value;
-
-    numero = parseInt(numero);
-    document.write("Numeros introducidos: " + numero + "<br >");
+    ComenzarIngreso()
     
-    while(isNaN(numero) || numero < 1 ) {
-        numero = prompt("Ingrese un número");
-        numero = parseInt(numero);
-    }
-
-    while (numerosImpares < numero) {
-        numerosPares++;
-
-        if (numerosImpares % 2 != 0); {
-
+        var contador = 0;
+        var contadorImpares = 0;
+    
+        while(contador < numero) {
+            contador++;
+    
+            if(contador % 2 != 0) {
+                contadorImpares++;
+            }
+    
         }
-
-    }
-
     /*
     while ( numerosImpares <= numero ) {
        document.write( + numerosImpares + "<br >");
@@ -81,19 +75,18 @@ function NumerosImpares ()
 
 function NumerosDivisibles ()
 {
-    var contador;
-    var contadorDivisibles = 1;
-    var numero = document.getElementById("numero").value;
+    ComenzarIngreso()
 
-    numero = parseInt(numero);
-    document.write("Numeros introducidos: " + numero + "<br >");
+    var contador = 1;
+    var cantidadDivisibles = 0;
 
-    while(contador < 100 ) {
-        contador++;
+    while (contador <= 100) {
 
-        if(numero % contador == 0) {
-            contadorDivisibles++;
+        if (numero % contador == 0) {
+            cantidadDivisibles++;
         }
+        
+        contador++;
     }
 
 
