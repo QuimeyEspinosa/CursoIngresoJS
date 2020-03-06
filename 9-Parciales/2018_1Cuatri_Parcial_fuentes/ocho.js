@@ -28,13 +28,15 @@ function mostrar()
         numero = prompt("Ingrese un numero");
         numero = parseInt(numero);
 
+        letra = prompt("Ingrese una letra");
+
         while(isNaN(numero) || numero < -100 || numero > 100) {
             numero = prompt("Error! Ingrese un numero valido");
             numero = parseInt(numero);
         }
 
         while(!isNaN(letra)) {
-            letra = prompt("Ingrese una letra");
+            letra = prompt("Ingrese una letra válida");
         }
 
         if(numero % 2 == 0) {
@@ -57,7 +59,7 @@ function mostrar()
             contadorPositivos++;
 
         } else if (numero < 0) {
-            //Punto E. Acumulador y Promedio de negativos
+            //Punto E. Acumulador de negativos
             acumuladorNegativos += numero;
         }
         
@@ -93,10 +95,10 @@ function mostrar()
         promedio = acumuladorPositivos / contadorPositivos;
     }
 
-    document.write("Promedio de positivos " + promedio);
-    document.write("Acumulador de negativos" + acumuladorNegativos + "<br>");
-    document.write("Numero máximo " + numeroMaximo + " letra máxima" + letraMaxima + "<br>");
-    document.write("Numero mínimo " + numeroMinimo + " letra mínima" + letraMinima + "<br>");
+    document.write("Promedio de positivos: " + promedio + "<br>");
+    document.write("Acumulador de negativos: " + acumuladorNegativos + "<br>");
+    document.write("Numero máximo: " + numeroMaximo + " letra máxima: " + letraMaxima + "<br>");
+    document.write("Numero mínimo: " + numeroMinimo + " letra mínima: " + letraMinima + "<br>");
         
 
 }

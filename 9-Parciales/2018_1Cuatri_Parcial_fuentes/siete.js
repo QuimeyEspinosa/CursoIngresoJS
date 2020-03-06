@@ -11,7 +11,7 @@ function mostrar()
         contador++;
 
         do {
-            var nota = prompt("Ingrese una nota");
+            var nota = prompt("Ingrese una nota del 1 al 10");
             nota = parseInt(nota);
         } while (isNaN(nota) || nota < 0 || nota > 10);
 
@@ -43,57 +43,7 @@ function mostrar()
     promedio = acumuladorSuma / contador;
 
     alert("Promedio " + promedio);
-    alert("Minimo " + minimoNota + " sexo minimo " + minimoSexo);
+    alert("La nota mínima es " + minimoNota + " y le pertenece al sexo " + minimoSexo);
+    alert("La cantidad de varones que se sacaron más de 6 es: " + contadorVarones);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    var alumnos;
-    var nota;
-    var sexo;
-
-    alumnos = 5
-
-    nota = prompt("Ingrese una nota del 1 al 10:");
-
-    sexo = prompt("Ingrese sexo ('F' o 'M')");
-
-    for(nota <= 10 ; alumnos ;  ) {
-        
-    }
-    
-    
 }

@@ -1,5 +1,4 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'mostrar'.
-
 /*Pedir los siguientes datos:
  nombre del pasajero;
  edad (mayores de 18);
