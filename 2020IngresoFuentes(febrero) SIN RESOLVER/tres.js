@@ -13,30 +13,5 @@ e) El promedio de edad entre los hombres solteros.^*/
 
 function mostrar()
 {
-	var nombrePasajero;
-	var edadPasajero;
-	var sexoPasajero;
-	var estadoCivilPasajero;
-
-	var respuesta;
-
-	do {
-
-		do {
-			nombrePasajero = prompt("Ingrese nomrbe del pasajero");
-		}while(!isNaN(nombrePasajero));
 	
-		do {
-			edadPasajero = prompt("Ingrese edad del pasajero");
-		}while(isNaN(edadPasajero) || pesoIngrediente < 18);
-	
-		do {
-			estadoCivilPasajero = prompt("Ingrese estado civil del pasajero 'soltero' 'casado' o 'viudo'");
-		}while(!isNaN(estadoCivilPasajero) || estadoCivilPasajero != "soltero" && estadoCivilPasajero != "casado" && estadoCivilPasajero != "viudo");
-	
-		
-	
-		respuesta = confirm("desea continuar?")
-	
-	  }while(respuesta);
 }
