@@ -17,11 +17,12 @@ function mostrar()
   var ingrediente;
   var pesoIngrediente;
 
-  var acumuladorIngredientes = 0;
+  var contadorIngredientes = 0;
   var acumuladorPrecio = 0 ;
   var acumuladorPesoIngredientes = 0;
 
   var precioPorKilo;
+  var precioPorKiloMax;
   var promedioPrecioPorKilo;
   var tipoValidadIngrediente;
 
@@ -38,7 +39,7 @@ function mostrar()
     do {
       ingrediente = prompt("Ingrese un ingrediente")
     }while(!isNaN(ingrediente));
-    acumuladorIngredientes++;
+    contadorIngredientes++;
 
     do {
       pesoIngrediente = prompt("Ingrese peso del ingrediente");
@@ -49,7 +50,7 @@ function mostrar()
 
     do {
       precioPorKilo = prompt("Ingrese precio por kilo del ingrediente");
-      precioPorKilo=parseInt(precioPorKilo);
+      precioPorKilo = parseInt(precioPorKilo);
     }while(isNaN(precioPorKilo) || precioPorKilo < 10 || precioPorKilo > 1000);
     //acumular precios para luego hacer descuentos
     acumuladorPrecio += precioPorKilo;
@@ -58,19 +59,10 @@ function mostrar()
       tipoValidadIngrediente = prompt("Ingrese tipo de ingrediente 'a' 'v' o 'm'");
     }while(!isNaN(tipoValidadIngrediente) || tipoValidadIngrediente != "a" && tipoValidadIngrediente != "v" && tipoValidadIngrediente != "m");
     
-    //punto a) b) c) d)
-    if(acumuladorPesoIngredientes >= 100 && acumuladorPesoIngredientes <= 300) {
-      descuento15 = acumuladorPrecio * 0.85;
-    } else if (acumuladorPesoIngredientes > 300) {
-      descuento25 =  acumuladorPrecio * 0.75;
-    } else {
-      sinDescuento = acumuladorPrecio;
-    }
-
     //punto e)
-    if(ingrediente && banderaIngrediente == 0 || precioIngredienteMax < (acumuladorPesoIngredientes * acumuladorPrecio)) {
+    if(ingrediente && banderaIngrediente == 0 || precioPorKiloMax < precioPorKilo) {
 
-      precioIngredienteMax = (acumuladorPesoIngredientes * acumuladorPrecio);
+      precioPorKiloMax = precioPorKilo;
       ingredienteMax = ingrediente;
       
       banderaIngrediente++;
@@ -80,8 +72,17 @@ function mostrar()
   
   }while(respuesta);
 
+  //punto a) b) c) d)
+  if(acumuladorPesoIngredientes >= 100 && acumuladorPesoIngredientes <= 300) {
+    descuento15 = acumuladorPrecio * 0.85;
+  } else if (acumuladorPesoIngredientes > 300) {
+    descuento25 =  acumuladorPrecio * 0.75;
+  } else {
+    sinDescuento = acumuladorPrecio;
+  }
+
   //punto f)
-    promedioPrecioPorKilo = acumuladorPrecio / acumuladorIngredientes;
+    promedioPrecioPorKilo = acumuladorPrecio / contadorIngredientes;
 
     document.write("Precio con descuento del 15%: " + descuento15 + "<br>");
     document.write("Precio con descuento del 25%: " + descuento25 + "<br>");
